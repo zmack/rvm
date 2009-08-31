@@ -648,7 +648,7 @@ function __rvm_use {
   if [ -z "$rvm_ruby_interpreter" ] ; then rvm_ruby_interpreter="default" ; fi
 
   if [ "$rvm_ruby_interpreter" = "default" -o "$rvm_ruby_interpreter" = "system" ] ; then
-    unset GEM_HOME MY_RUBY_HOME IRBRC
+    unset GEM_HOME MY_RUBY_HOME IRBRC rvm_prompt
     PATH="$rvm_default_path" ; export PATH
     if [ "$rvm_ruby_interpreter" = "default" -a -s $rvm_install_path/current ] ; then
       source $rvm_install_path/current
